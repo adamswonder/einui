@@ -225,7 +225,7 @@ export default function HomePage() {
                   </GlassBadge>
                 </div>
                 <code className="block text-sm md:text-base text-cyan-400 font-mono overflow-x-auto">
-                  npx shadcn@latest add https://ein-ui.vercel.app/r/glass-card.json
+                  npx shadcn@latest add https://ui.eindev.ir/r/glass-card.json
                 </code>
               </div>
             </GlassTabsContent>
