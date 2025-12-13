@@ -12,17 +12,17 @@ import { CodeBlockWithCopy } from "@/components/docs/code-block-with-copy"
 import { ArrowRight, ArrowLeft, Download, Package, Terminal, FileCode } from "lucide-react"
 
 const installCommands = {
-  "glass-card": "npx shadcn@latest add https://your-domain.com/r/glass-card",
-  "glass-button": "npx shadcn@latest add https://your-domain.com/r/glass-button",
-  "glass-input": "npx shadcn@latest add https://your-domain.com/r/glass-input",
-  "glass-dialog": "npx shadcn@latest add https://your-domain.com/r/glass-dialog",
-  "glass-tabs": "npx shadcn@latest add https://your-domain.com/r/glass-tabs",
-  "glass-badge": "npx shadcn@latest add https://your-domain.com/r/glass-badge",
-  "glass-avatar": "npx shadcn@latest add https://your-domain.com/r/glass-avatar",
-  "glass-progress": "npx shadcn@latest add https://your-domain.com/r/glass-progress",
-  "glass-switch": "npx shadcn@latest add https://your-domain.com/r/glass-switch",
-  "glass-slider": "npx shadcn@latest add https://your-domain.com/r/glass-slider",
-  "glass-tooltip": "npx shadcn@latest add https://your-domain.com/r/glass-tooltip",
+  "glass-card": "npx shadcn@latest add https://ui.eindev.ir/r/glass-card",
+  "glass-button": "npx shadcn@latest add https://ui.eindev.ir/r/glass-button",
+  "glass-input": "npx shadcn@latest add https://ui.eindev.ir/r/glass-input",
+  "glass-dialog": "npx shadcn@latest add https://ui.eindev.ir/r/glass-dialog",
+  "glass-tabs": "npx shadcn@latest add https://ui.eindev.ir/r/glass-tabs",
+  "glass-badge": "npx shadcn@latest add https://ui.eindev.ir/r/glass-badge",
+  "glass-avatar": "npx shadcn@latest add https://ui.eindev.ir/r/glass-avatar",
+  "glass-progress": "npx shadcn@latest add https://ui.eindev.ir/r/glass-progress",
+  "glass-switch": "npx shadcn@latest add https://ui.eindev.ir/r/glass-switch",
+  "glass-slider": "npx shadcn@latest add https://ui.eindev.ir/r/glass-slider",
+  "glass-tooltip": "npx shadcn@latest add https://ui.eindev.ir/r/glass-tooltip",
 }
 
 export default function InstallationPage() {
@@ -85,12 +85,12 @@ export default function InstallationPage() {
               <GlassCardContent className="space-y-6">
                 <div>
                   <h4 className="text-white font-medium mb-3">1. Add a single component</h4>
-                  <CodeBlockWithCopy code="npx shadcn@latest add https://your-domain.com/r/glass-card" />
+                  <CodeBlockWithCopy code="npx shadcn@latest add https://ui.eindev.ir/r/glass-card" />
                 </div>
 
                 <div>
                   <h4 className="text-white font-medium mb-3">2. Add multiple components</h4>
-                  <CodeBlockWithCopy code="npx shadcn@latest add https://your-domain.com/r/glass-button https://your-domain.com/r/glass-input" />
+                  <CodeBlockWithCopy code="npx shadcn@latest add https://ui.eindev.ir/r/glass-button https://ui.eindev.ir/r/glass-input" />
                 </div>
 
                 <div>
@@ -99,7 +99,7 @@ export default function InstallationPage() {
                   <CodeBlockWithCopy
                     code={`{
   "registries": {
-    "@ein": "https://your-domain.com/r/{name}"
+    "@ein": "https://ui.eindev.ir/r/{name}"
   }
 }`}
                     filename="components.json"

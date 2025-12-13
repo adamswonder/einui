@@ -53,7 +53,7 @@ export default function CLIPage() {
           <CodeBlockWithCopy code="npx shadcn@latest init" />
 
           <p className="text-white/70">Then add any Ein UI component:</p>
-          <CodeBlockWithCopy code="npx shadcn@latest add https://your-domain.com/r/glass-card" />
+          <CodeBlockWithCopy code="npx shadcn@latest add https://ui.eindev.ir/r/glass-card" />
         </GlassCardContent>
       </GlassCard>
 
@@ -120,7 +120,7 @@ export default function CLIPage() {
     "hooks": "@/hooks"
   },
   "registries": {
-    "@ein": "https://your-domain.com/r/{name}"
+    "@ein": "https://ui.eindev.ir/r/{name}"
   }
 }`}
             filename="components.json"
