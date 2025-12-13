@@ -1,0 +1,173 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "glass-avatar",
+      "type": "registry:ui",
+      "title": "Glass Avatar",
+      "dependencies": ["@radix-ui/react-avatar"],
+      "description": "Circular profile images with gradient glow effects and fallback initials for user representation.",
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-badge",
+      "type": "registry:ui",
+      "title": "Glass Badge",
+      "description": "Small visual indicators for status, labels, or categories with frosted glass styling and color variants.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-button",
+      "type": "registry:ui",
+      "title": "Glass Button",
+      "description": "Interactive button components with multiple variants, sizes, and optional glow effects.",
+      "dependencies": ["@radix-ui/react-slot", "class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-card",
+      "type": "registry:ui",
+      "title": "Glass Card",
+      "description": "Flexible container components with frosted glass morphism effect, perfect for displaying grouped content.",
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-dialog",
+      "type": "registry:ui",
+      "title": "Glass Dialog",
+      "description": "Modal dialog components with backdrop blur and smooth animations for confirmations and forms.",
+      "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-input",
+      "type": "registry:ui",
+      "title": "Glass Input",
+      "description": "Form input components with focus glow animations and glass morphism styling.",
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-progress",
+      "type": "registry:ui",
+      "title": "Glass Progress",
+      "description": "Visual indicators for task completion with animated gradient fill and glow effects.",
+      "dependencies": ["@radix-ui/react-progress"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-slider",
+      "type": "registry:ui",
+      "title": "Glass Slider",
+      "description": "Range input controls with gradient track, glow effects, and smooth thumb interaction.",
+      "dependencies": ["@radix-ui/react-slider"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-switch",
+      "type": "registry:ui",
+      "title": "Glass Switch",
+      "description": "Toggle controls for binary options with smooth transitions and glow effects when activated.",
+      "dependencies": ["@radix-ui/react-switch"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-tabs",
+      "type": "registry:ui",
+      "title": "Glass Tabs",
+      "description": "Tabbed interface components with smooth transitions and glass morphism styling.",
+      "dependencies": ["@radix-ui/react-tabs"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "glass-tooltip",
+      "type": "registry:ui",
+      "title": "Glass Tooltip",
+      "description": "Contextual information popups with glass morphism styling and smooth animations on hover.",
+      "dependencies": ["@radix-ui/react-tooltip"],
+      "files": [
+        {
+          "path": "registry/liquid-glass/glass-tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "admin-panel",
+      "type": "registry:block",
+      "title": "Admin Panel",
+      "description": "A complete admin dashboard built with liquid glass components.",
+      "registryDependencies": [
+        "glass-card",
+        "glass-button",
+        "glass-input",
+        "glass-tabs",
+        "glass-dialog",
+        "glass-badge",
+        "glass-avatar",
+        "glass-progress",
+        "glass-switch"
+      ],
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "registry/blocks/admin/page.tsx",
+          "type": "registry:page",
+          "target": "app/admin/page.tsx"
+        }
+      ]
+    }
+  ]
+}
