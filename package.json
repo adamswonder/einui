@@ -11,7 +11,8 @@
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start",
-    "registry:build": "shadcn build"
+    "registry:build": "shadcn build",
+    "registry:search": "shadcn search"
   },
   "keywords": [],
   "author": "",
