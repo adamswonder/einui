@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-button",
+  "type": "registry:component",
+  "title": "Glass Button",
+  "description": "A liquid glass styled button with multiple variants and glow effects.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-button.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-button.tsx"
+    }
+  ]
+}

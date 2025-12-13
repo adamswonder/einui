@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-avatar",
+  "type": "registry:component",
+  "title": "Glass Avatar",
+  "description": "A liquid glass styled avatar component with gradient glow.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-avatar.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-avatar.tsx"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-progress",
+  "type": "registry:component",
+  "title": "Glass Progress",
+  "description": "A liquid glass styled progress bar with animated gradient fill.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-progress.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-progress.tsx"
+    }
+  ]
+}

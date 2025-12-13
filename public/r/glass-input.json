@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-input",
+  "type": "registry:component",
+  "title": "Glass Input",
+  "description": "A liquid glass styled input field with focus glow animation.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-input.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-input.tsx"
+    }
+  ]
+}

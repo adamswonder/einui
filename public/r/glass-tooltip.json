@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-tooltip",
+  "type": "registry:component",
+  "title": "Glass Tooltip",
+  "description": "A liquid glass styled tooltip component.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-tooltip.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-tooltip.tsx"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-badge",
+  "type": "registry:component",
+  "title": "Glass Badge",
+  "description": "A liquid glass styled badge component with multiple color variants.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-badge.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-badge.tsx"
+    }
+  ]
+}

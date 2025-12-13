@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-slider",
+  "type": "registry:component",
+  "title": "Glass Slider",
+  "description": "A liquid glass styled range slider with gradient track.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-slider.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-slider.tsx"
+    }
+  ]
+}

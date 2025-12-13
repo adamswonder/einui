@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-switch",
+  "type": "registry:component",
+  "title": "Glass Switch",
+  "description": "A liquid glass styled toggle switch with glow effect.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-switch.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-switch.tsx"
+    }
+  ]
+}

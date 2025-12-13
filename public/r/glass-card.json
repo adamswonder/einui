@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-card",
+  "type": "registry:component",
+  "title": "Glass Card",
+  "description": "A liquid glass styled card component with transparency and glow effects.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-card.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-card.tsx"
+    }
+  ]
+}

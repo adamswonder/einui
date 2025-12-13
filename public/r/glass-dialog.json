@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-dialog",
+  "type": "registry:component",
+  "title": "Glass Dialog",
+  "description": "A liquid glass styled modal dialog with backdrop blur.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "registryDependencies": ["glass-button"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-dialog.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-dialog.tsx"
+    }
+  ]
+}

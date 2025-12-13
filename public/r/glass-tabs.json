@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "glass-tabs",
+  "type": "registry:component",
+  "title": "Glass Tabs",
+  "description": "A liquid glass styled tabs component with smooth transitions.",
+  "dependencies": ["clsx", "tailwind-merge"],
+  "files": [
+    {
+      "path": "components/liquid-glass/glass-tabs.tsx",
+      "type": "registry:component",
+      "target": "components/ui/glass-tabs.tsx"
+    }
+  ]
+}
