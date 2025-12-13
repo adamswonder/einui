@@ -1,13 +1,13 @@
-import Link from "next/link"
+import Link from "next/link";
 import {
   GlassCard,
   GlassCardHeader,
   GlassCardTitle,
   GlassCardDescription,
   GlassCardContent,
-} from "@/components/liquid-glass/glass-card"
-import { GlassButton } from "@/components/liquid-glass/glass-button"
-import { GlassBadge } from "@/components/liquid-glass/glass-badge"
+} from "@/registry/liquid-glass/glass-card";
+import { GlassButton } from "@/registry/liquid-glass/glass-button";
+import { GlassBadge } from "@/registry/liquid-glass/glass-badge";
 import {
   Square,
   LayoutGrid,
@@ -20,7 +20,26 @@ import {
   Package,
   BookOpen,
   Blocks,
-} from "lucide-react"
+  Github,
+  Accessibility,
+  ChevronRight,
+  Code2,
+  Globe,
+  Moon,
+  Palette,
+  Star,
+  Twitter,
+  Zap,
+} from "lucide-react";
+import {
+  GlassTabs,
+  GlassTabsList,
+  GlassTabsTrigger,
+  GlassTabsContent,
+  GlassAvatar,
+  GlassAvatarFallback,
+  GlassProgress,
+} from "@/registry/liquid-glass";
 
 const components = [
   {
@@ -53,15 +72,86 @@ const components = [
     href: "/docs/components/tabs",
     icon: Layers,
   },
-]
+  {
+    title: "Badge",
+    description: "Status indicators and labels with color variants",
+    href: "/docs/components/badge",
+    icon: Sparkles,
+  },
+];
+
+const features = [
+  {
+    icon: Zap,
+    title: "Lightning Fast",
+    description:
+      "Built with performance in mind using Tailwind CSS v4 and optimized React components",
+  },
+  {
+    icon: Palette,
+    title: "Customizable",
+    description: "Easily customize colors, linears, and effects through CSS variables",
+  },
+  {
+    icon: Moon,
+    title: "Dark Mode Ready",
+    description: "Beautiful dark mode support with smooth theme transitions",
+  },
+  {
+    icon: Accessibility,
+    title: "Accessible",
+    description: "Built on Radix UI primitives with full keyboard navigation and ARIA support",
+  },
+  {
+    icon: Code2,
+    title: "TypeScript",
+    description: "Full TypeScript support with exported types for all components",
+  },
+  {
+    icon: Globe,
+    title: "Responsive",
+    description: "Mobile-first design that adapts seamlessly to any screen size",
+  },
+];
+
+const stats = [
+  { value: "11+", label: "Components" },
+  { value: "100%", label: "TypeScript" },
+  { value: "MIT", label: "License" },
+  { value: "v4", label: "Tailwind CSS" },
+];
+
+const testimonials = [
+  {
+    name: "Sarah Chen",
+    role: "Frontend Developer",
+    avatar: "SC",
+    content:
+      "Ein UI has transformed how I build interfaces. The glass morphism effects are stunning and incredibly easy to implement.",
+  },
+  {
+    name: "Marcus Rodriguez",
+    role: "UI Designer",
+    avatar: "MR",
+    content:
+      "Finally, a component library that nails the modern glass aesthetic. The attention to detail is exceptional.",
+  },
+  {
+    name: "Emily Watson",
+    role: "Full Stack Developer",
+    avatar: "EW",
+    content:
+      "The Shadcn registry integration is brilliant. I can add components with a single command and they just work.",
+  },
+];
 
 export default function HomePage() {
   return (
     <main className="min-h-screen relative overflow-hidden">
-      {/* Gradient background */}
+      {/* linear background */}
       <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-blue-950 to-slate-900" />
 
-      {/* Animated gradient orbs */}
+      {/* Animated linear orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl animate-pulse" />
       <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
@@ -77,7 +167,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center gap-2 mb-6">
+          <div className="flex flex-wrap justify-center gap-2 mb-6">
             <GlassBadge variant="primary">
               <Sparkles className="w-3 h-3 mr-1" />
               Tailwind CSS v4
@@ -94,44 +184,89 @@ export default function HomePage() {
               Liquid Glass Components
             </span>
           </h1>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg md:text-xl mb-10 text-balance">
-            Beautiful, responsive Shadcn components with frosted glass morphism. Built for modern web applications with
-            full dark mode support. Now available as a Shadcn registry.
+          <p className="text-white/60 max-w-2xl mx-auto text-base md:text-lg mb-10 text-wrap">
+            Beautiful, responsive Shadcn components with frosted glass morphism. Built for modern
+            web applications with full dark mode support. Now available as a Shadcn registry.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/docs">
               <GlassButton variant="primary" size="lg">
-                <BookOpen className="w-4 h-4 mr-2" />
+                <BookOpen className="size-4 mr-2" />
                 Documentation
               </GlassButton>
             </Link>
             <Link href="/docs/components/cards">
               <GlassButton variant="outline" size="lg">
                 Browse Components
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </GlassButton>
-            </Link>
-            <Link href="/docs/blocks/admin">
-              <GlassButton variant="ghost" size="lg">
-                View Admin Demo
+                <ArrowRight className="size-4 ml-2" />
               </GlassButton>
             </Link>
           </div>
         </header>
 
-        {/* Quick Install */}
-        <section className="mb-16 max-w-2xl mx-auto">
-          <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6">
-            <p className="text-sm text-white/60 mb-3">Quick Install</p>
-            <code className="block text-sm md:text-base text-cyan-400 font-mono overflow-x-auto">
-              npx shadcn@latest add https://ein-ui.vercel.app/r/glass-card.json
-            </code>
+        {/* Quick Install with Tabs */}
+        <section className="mb-20 max-w-2xl mx-auto">
+          <h2 className="text-2xl font-semibold text-white mb-6 text-center">
+            Get Started in Seconds
+          </h2>
+          <GlassTabs defaultValue="cli" className="w-full">
+            <div className="flex justify-center mb-4">
+              <GlassTabsList>
+                <GlassTabsTrigger value="cli">CLI</GlassTabsTrigger>
+                <GlassTabsTrigger value="manual">Manual</GlassTabsTrigger>
+              </GlassTabsList>
+            </div>
+            <GlassTabsContent value="cli">
+              <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="text-sm text-white/60">Install via Shadcn CLI</p>
+                  <GlassBadge variant="success" size="sm">
+                    Recommended
+                  </GlassBadge>
+                </div>
+                <code className="block text-sm md:text-base text-cyan-400 font-mono overflow-x-auto">
+                  npx shadcn@latest add https://ein-ui.vercel.app/r/glass-card.json
+                </code>
+              </div>
+            </GlassTabsContent>
+            <GlassTabsContent value="manual">
+              <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6">
+                <p className="text-sm text-white/60 mb-3">Copy component code directly</p>
+                <code className="block text-sm text-cyan-400 font-mono overflow-x-auto">
+                  Visit /docs/components/cards for full source code
+                </code>
+              </div>
+            </GlassTabsContent>
+          </GlassTabs>
+        </section>
+
+        <section className="mb-20">
+          <h2 className="text-2xl font-semibold text-white mb-3 text-center">Why Ein UI?</h2>
+          <p className="text-white/60 text-center mb-10 max-w-xl mx-auto">
+            Built with modern best practices and designed for developer experience
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors"
+              >
+                <div className="p-3 rounded-xl bg-linear-to-br from-cyan-500/20 to-purple-500/20 w-fit mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* Components Grid */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Components</h2>
+        <section className="mb-20">
+          <h2 className="text-2xl font-semibold text-white mb-3 text-center">Components</h2>
+          <p className="text-white/60 text-center mb-10 max-w-xl mx-auto">
+            A growing collection of beautiful glass-styled components
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {components.map((component) => (
               <Link key={component.href} href={component.href} className="group">
@@ -143,22 +278,91 @@ export default function HomePage() {
                       </div>
                       <GlassCardTitle>{component.title}</GlassCardTitle>
                     </div>
-                    <GlassCardDescription className="mt-2">{component.description}</GlassCardDescription>
+                    <GlassCardDescription className="mt-2">
+                      {component.description}
+                    </GlassCardDescription>
                   </GlassCardHeader>
                   <GlassCardContent>
                     <span className="text-sm text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">
-                      View component <ArrowRight className="w-4 h-4" />
+                      View component <ArrowRight className="size-4" />
                     </span>
                   </GlassCardContent>
                 </GlassCard>
               </Link>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link href="/docs/components/cards">
+              <GlassButton variant="outline">
+                View All Components
+                <ChevronRight className="size-4 ml-1" />
+              </GlassButton>
+            </Link>
+          </div>
         </section>
 
-        {/* Sample Pages */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-white mb-8 text-center">Blocks</h2>
+        <section className="mb-20">
+          <h2 className="text-2xl font-semibold text-white mb-3 text-center">Live Preview</h2>
+          <p className="text-white/60 text-center mb-10 max-w-xl mx-auto">
+            See how components work together in a realistic interface
+          </p>
+          <GlassCard className="max-w-2xl mx-auto">
+            <GlassCardHeader>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <GlassAvatar>
+                    <GlassAvatarFallback>EIN</GlassAvatarFallback>
+                  </GlassAvatar>
+                  <div>
+                    <GlassCardTitle>Project Dashboard</GlassCardTitle>
+                    <GlassCardDescription>Ein UI Component Library</GlassCardDescription>
+                  </div>
+                </div>
+                <GlassBadge variant="success">Active</GlassBadge>
+              </div>
+            </GlassCardHeader>
+            <GlassCardContent className="space-y-6">
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-white/80">Development Progress</span>
+                  <span className="text-sm text-white/60">85%</span>
+                </div>
+                <GlassProgress value={85} />
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center p-4 rounded-xl bg-white/5">
+                  <div className="text-2xl font-bold text-white">11</div>
+                  <div className="text-xs text-white/60">Components</div>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-white/5">
+                  <div className="text-2xl font-bold text-white">6</div>
+                  <div className="text-xs text-white/60">Pages</div>
+                </div>
+                <div className="text-center p-4 rounded-xl bg-white/5">
+                  <div className="text-2xl font-bold text-white">100%</div>
+                  <div className="text-xs text-white/60">TypeScript</div>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <GlassButton variant="primary" className="flex-1">
+                  <Code2 className="size-4 mr-2" />
+                  View Source
+                </GlassButton>
+                <GlassButton variant="outline" className="flex-1">
+                  <Star className="size-4 mr-2" />
+                  Star Project
+                </GlassButton>
+              </div>
+            </GlassCardContent>
+          </GlassCard>
+        </section>
+
+        {/* Sample Pages / Blocks */}
+        <section className="mb-20">
+          <h2 className="text-2xl font-semibold text-white mb-3 text-center">Blocks</h2>
+          <p className="text-white/60 text-center mb-10 max-w-xl mx-auto">
+            Ready-to-use page templates built with Ein UI components
+          </p>
           <Link href="/docs/blocks/admin" className="block group max-w-2xl mx-auto">
             <GlassCard className="transition-transform duration-300 group-hover:scale-[1.02]">
               <GlassCardHeader>
@@ -176,7 +380,7 @@ export default function HomePage() {
               </GlassCardHeader>
               <GlassCardContent>
                 <span className="text-sm text-cyan-400 flex items-center gap-1 group-hover:gap-2 transition-all">
-                  View demo <ArrowRight className="w-4 h-4" />
+                  View demo <ArrowRight className="size-4" />
                 </span>
               </GlassCardContent>
             </GlassCard>
@@ -185,11 +389,25 @@ export default function HomePage() {
 
         {/* Footer */}
         <footer className="text-center pt-8 border-t border-white/10">
+          <div className="flex justify-center gap-4 mb-6">
+            <GlassButton variant="ghost" size="sm" asChild>
+              <a href="https://github.com/ehsanghaffar/ein-ui" target="_blank">
+                <Github className="size-4" />
+              </a>
+            </GlassButton>
+            <GlassButton variant="ghost" size="sm" asChild>
+              <a href="https://twitter.com/ehsanghaffar" target="_blank">
+                <Twitter className="size-4" />
+              </a>
+            </GlassButton>
+          </div>
           <p className="text-white/40 text-sm">
-            Built by <span className="text-white/70 font-medium">Ehsan</span> with Shadcn UI & Tailwind CSS v4
+            Built by
+            <span className="text-white/70 px-2 font-medium">Ehsan Ghaffar</span>
+            with Shadcn UI & Tailwind CSS v4
           </p>
         </footer>
       </div>
     </main>
-  )
+  );
 }
