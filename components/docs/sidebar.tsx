@@ -70,35 +70,35 @@ const navigation: NavSection[] = [
   {
     title: "Components",
     items: [
-      { title: "Avatar", href: "/docs/components/avatar", icon: <User className="size-4" /> },
-      { title: "Badge", href: "/docs/components/badge", icon: <Info className="size-4" /> },
+      { title: "Avatar", href: "/docs/components/glass-avatar", icon: <User className="size-4" /> },
+      { title: "Badge", href: "/docs/components/glass-badge", icon: <Info className="size-4" /> },
       {
         title: "Buttons",
-        href: "/docs/components/buttons",
+        href: "/docs/components/glass-button",
         icon: <LayoutGrid className="size-4" />,
       },
-      { title: "Cards", href: "/docs/components/cards", icon: <Square className="size-4" /> },
+      { title: "Cards", href: "/docs/components/glass-card", icon: <Square className="size-4" /> },
       {
         title: "Dialogs",
-        href: "/docs/components/dialogs",
+        href: "/docs/components/glass-dialog",
         icon: <MessageSquare className="size-4" />,
       },
       {
         title: "Inputs",
-        href: "/docs/components/inputs",
+        href: "/docs/components/glass-input",
         icon: <TextCursorInput className="size-4" />,
       },
       {
         title: "Progress",
-        href: "/docs/components/progress",
+        href: "/docs/components/glass-progress",
         icon: <CheckCircle className="size-4" />,
       },
-      { title: "Slider", href: "/docs/components/slider", icon: <Sliders className="size-4" /> },
-      { title: "Switch", href: "/docs/components/switch", icon: <ToggleLeft className="size-4" /> },
-      { title: "Tabs", href: "/docs/components/tabs", icon: <Layers className="size-4" /> },
+      { title: "Slider", href: "/docs/components/glass-slider", icon: <Sliders className="size-4" /> },
+      { title: "Switch", href: "/docs/components/glass-switch", icon: <ToggleLeft className="size-4" /> },
+      { title: "Tabs", href: "/docs/components/glass-tabs", icon: <Layers className="size-4" /> },
       {
         title: "Tooltip",
-        href: "/docs/components/tooltip",
+        href: "/docs/components/glass-tooltip",
         icon: <CircleDot className="size-4" />,
       },
     ],
@@ -108,44 +108,44 @@ const navigation: NavSection[] = [
     items: [
       {
         title: "Command Palette",
-        href: "/docs/components/command-palette",
+        href: "/docs/components/glass-command-palette",
         icon: <Command className="size-4" />,
         isNew: true,
       },
       {
         title: "Dock",
-        href: "/docs/components/dock",
+        href: "/docs/components/glass-dock",
         icon: <Dock className="size-4" />,
         isNew: true,
       },
       {
         title: "Gauge",
-        href: "/docs/components/gauge",
+        href: "/docs/components/glass-gauge",
         icon: <Gauge className="size-4" />,
         isNew: true,
       },
       {
         title: "Morph Card",
-        href: "/docs/components/morph-card",
+        href: "/docs/components/glass-morph-card",
         icon: <MousePointer className="size-4" />,
         isNew: true,
       },
       {
         title: "Notifications",
-        href: "/docs/components/notifications",
+        href: "/docs/components/glass-notification",
         icon: <Bell className="size-4" />,
         isNew: true,
       },
 
       {
         title: "Ripple",
-        href: "/docs/components/ripple",
+        href: "/docs/components/glass-ripple",
         icon: <Droplets className="size-4" />,
         isNew: true,
       },
       {
         title: "Timeline",
-        href: "/docs/components/timeline",
+        href: "/docs/components/glass-timeline",
         icon: <Clock className="size-4" />,
         isNew: true,
       },
@@ -156,7 +156,7 @@ const navigation: NavSection[] = [
   {
     title: "Widgets",
     items: [
-  { title: "Calendar", href: "/docs/components/widgets/calendar", icon: <Calendar className="h-4 w-4" />, isNew: true },
+  { title: "Calendar", href: "/docs/components/calendar-widget", icon: <Calendar className="h-4 w-4" />, isNew: true },
     ]
   },
   {

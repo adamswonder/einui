@@ -227,7 +227,7 @@ export default function HomePage() {
           {/* Announcement Banner for New Widgets */}
           <div className="flex justify-center mb-6">
             <GlassAnnouncement
-              href="/docs/components/widgets/calendar"
+              href="/docs/components/calendar-widget"
               label="New"
               variant="purple"
               size="lg"
