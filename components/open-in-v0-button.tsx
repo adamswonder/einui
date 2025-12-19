@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
-export function OpenInV0Button({ url }: { url: string }) {
+export function OpenInV0Button({ component }: { component: string }) {
+  const url = encodeURIComponent(`https://ui.eindev.ir/r/${component}.json`);
   return (
     <Button
       aria-label="Open in v0"
