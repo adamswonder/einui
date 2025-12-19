@@ -24,7 +24,8 @@ import { GlassInput } from "@/registry/liquid-glass/glass-input"
 import { GlassButton } from "@/registry/liquid-glass/glass-button"
 import { GlassAvatar, GlassAvatarFallback } from "@/registry/liquid-glass/glass-avatar"
 import { GlassBadge } from "@/registry/liquid-glass/glass-badge"
-import { GlassDialog, GlassDialogTrigger, GlassDialogContent, GlassDialogHeader, GlassDialogTitle, GlassDialogDescription, GlassDialogFooter, GlassProgress } from "@/registry/liquid-glass"
+import { GlassDialog, GlassDialogContent, GlassDialogDescription, GlassDialogFooter, GlassDialogHeader, GlassDialogTitle, GlassDialogTrigger } from "@/registry/liquid-glass/glass-dialog"
+import { GlassProgress } from "@/registry/liquid-glass/glass-progress"
 
 
 const stats = [
