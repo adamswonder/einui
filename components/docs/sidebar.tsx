@@ -177,6 +177,18 @@ const navigation: NavSection[] = [
         icon: <Clock className="size-4" />,
         isNew: true,
       },
+      {
+        title: "Stats",
+        href: "/docs/components/stats-widget",
+        icon: <TrendingUp className="size-4" />,
+        isNew: true,
+      },
+      {
+        title: "Weather",
+        href: "/docs/components/weather-widget",
+        icon: <Cloud className="size-4" />,
+        isNew: true,
+      },
     ],
   },
   {
