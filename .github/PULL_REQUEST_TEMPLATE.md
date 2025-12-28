@@ -9,10 +9,13 @@ Closes: # (issue number)
 ## Checklist
 
 - [ ] My code follows the project style and patterns
-- [ ] I have added tests where applicable
-- [ ] I have added or updated documentation where applicable
+- [ ] I have added tests where applicable (`pnpm test`)
+- [ ] I have added or updated documentation where applicable (`app/docs/components/*`)
+- [ ] I updated `registry.json` if adding/removing components
+- [ ] Screenshots/GIFs added for UI changes
 - [ ] Linting passes (`pnpm lint`)
 - [ ] Built without type errors (`pnpm build`)
+- [ ] Visual/Accessibility checks added (or noted in PR if pending)
 
 ## Testing
 
