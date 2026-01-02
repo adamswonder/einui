@@ -168,8 +168,19 @@ describe('GlassButton', () => {
           Text
         </GlassButton>
       )
-      const button = screen.getByRole('button')
-      expect(button).toHaveClass('[&_svg]:size-4')
+      const svg = container.querySelector('svg')
+      expect(svg).toHaveClass('size-4')
+    })
+
+    it('applies icon size classes', () => {
+      const { container } = render(
+        <GlassButton>
+          <svg />
+          Text
+        </GlassButton>
+      )
+      const svg = container.querySelector('svg')
+      expect(svg).toHaveClass('size-4')
     })
   })
 

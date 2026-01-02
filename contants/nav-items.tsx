@@ -50,11 +50,6 @@ import {
 } from "lucide-react";
 
 
-// Icon mapping for widgets
-const widgetIcons: Record<string, LucideIcon> = {
-
-}
-
 // Icon mapping for components
 const componentIcons: Record<string, LucideIcon> = {
   "glass-avatar": User,

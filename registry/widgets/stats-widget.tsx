@@ -8,11 +8,6 @@ import {
   ArrowUp,
   ArrowDown,
   Minus,
-  Activity,
-  Users,
-  DollarSign,
-  Zap,
-  Target,
 } from "lucide-react";
 import { GlassWidgetBase } from "./base-widget";
 

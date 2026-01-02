@@ -19,7 +19,6 @@ interface CopyButtonProps {
 export function CopyButton({
   text,
   label,
-  language,
   className,
   showLabel = false,
 }: CopyButtonProps) {
