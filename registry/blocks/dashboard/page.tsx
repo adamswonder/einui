@@ -172,8 +172,8 @@ export default function DashboardBlockPage() {
                     </p>
                     <p className="text-xs text-white/40 mt-0.5">{item.time}</p>
                   </div>
-                  {item.status === "success" && <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0" />}
-                  {item.status === "warning" && <XCircle className="h-4 w-4 text-yellow-400 flex-shrink-0" />}
+                  {item.status === "success" && <CheckCircle2 className="h-4 w-4 text-green-400 shrink-0" />}
+                  {item.status === "warning" && <XCircle className="h-4 w-4 text-yellow-400 shrink-0" />}
                 </div>
               ))}
             </div>
