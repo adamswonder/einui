@@ -5,6 +5,11 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight, Plus, Clock } from "lucide-react";
 import { GlassWidgetBase } from "./base-widget";
 
+// Helper: returns the start-of-month Date for a given date
+function getMonthStart(date: Date) {
+  return new Date(date.getFullYear(), date.getMonth(), 1);
+}
+
 interface CalendarWidgetProps {
   date?: Date;
   selectedDate?: Date;
@@ -13,13 +18,41 @@ interface CalendarWidgetProps {
 }
 
 function CalendarWidget({
-  date = new Date(),
+  date,
   selectedDate,
   onDateSelect,
   className,
 }: CalendarWidgetProps) {
-  const [currentMonth, setCurrentMonth] = React.useState(date);
-  const selected = selectedDate || date;
+  const [internalDate, setInternalDate] = React.useState<Date | null>(date ?? null);
+
+  // Always create the month state (avoid conditional hooks). Use a deterministic fallback date.
+  const [currentMonth, setCurrentMonth] = React.useState<Date>(() =>
+    getMonthStart(date ?? new Date(0))
+  );
+
+  // On mount/client, set "now" if no date prop was provided.
+  React.useEffect(() => {
+    if (!date) setInternalDate(new Date());
+  }, [date]);
+
+  // When internalDate is ready, sync currentMonth.
+  React.useEffect(() => {
+    if (internalDate) {
+      setCurrentMonth(getMonthStart(internalDate));
+    }
+  }, [internalDate]);
+
+  if (!internalDate) {
+    // Lightweight client-side loading state to avoid using `new Date()` during prerender
+    return (
+      <GlassWidgetBase className={cn("min-w-60 p-4", className)} glowColor="purple">
+        <div className="h-6 w-36 bg-white/8 rounded animate-pulse" />
+        <div className="h-36 w-full mt-3 bg-white/8 rounded animate-pulse" />
+      </GlassWidgetBase>
+    );
+  }
+
+  const selected = selectedDate ?? internalDate;
 
   const monthName = currentMonth.toLocaleDateString("en-US", { month: "short" });
   const year = currentMonth.getFullYear();
@@ -61,6 +94,7 @@ function CalendarWidget({
 
   return (
     <GlassWidgetBase className={cn("min-w-60", className)} size="sm" glowColor="purple">
+      {/* ...existing UI... */}
       <div className="flex items-center justify-between mb-3">
         <button
           onClick={prevMonth}
@@ -117,10 +151,28 @@ interface CompactCalendarWidgetProps {
   className?: string;
 }
 
-function CompactCalendarWidget({ date = new Date(), className }: CompactCalendarWidgetProps) {
-  const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
-  const monthName = date.toLocaleDateString("en-US", { month: "short" });
-  const dayNumber = date.getDate();
+function CompactCalendarWidget({ date, className }: CompactCalendarWidgetProps) {
+  const [internalDate, setInternalDate] = React.useState<Date | null>(date ?? null);
+  React.useEffect(() => {
+    if (!date) setInternalDate(new Date());
+  }, [date]);
+
+  if (!internalDate) {
+    // Render a lightweight client-side loading state to avoid using `new Date()` during prerender
+    return (
+      <GlassWidgetBase
+        className={cn("flex flex-col items-center justify-center min-w-30", className)}
+        glowColor="purple"
+      >
+        <div className="h-4 w-20 bg-white/8 rounded animate-pulse" />
+        <div className="h-12 w-16 mt-2 bg-white/8 rounded animate-pulse" />
+      </GlassWidgetBase>
+    );
+  }
+
+  const dayName = internalDate.toLocaleDateString("en-US", { weekday: "short" });
+  const monthName = internalDate.toLocaleDateString("en-US", { month: "short" });
+  const dayNumber = internalDate.getDate();
 
   return (
     <GlassWidgetBase
@@ -150,13 +202,27 @@ interface EventsCalendarWidgetProps {
 }
 
 function EventsCalendarWidget({
-  date = new Date(),
+  date,
   events = [],
   className,
 }: EventsCalendarWidgetProps) {
-  const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-  const monthName = date.toLocaleDateString("en-US", { month: "long" });
-  const dayNumber = date.getDate();
+  const [internalDate, setInternalDate] = React.useState<Date | null>(date ?? null);
+  React.useEffect(() => {
+    if (!date) setInternalDate(new Date());
+  }, [date]);
+
+  if (!internalDate) {
+    return (
+      <GlassWidgetBase className={cn("min-w-65", className)} size="lg" glowColor="purple">
+        <div className="h-6 w-24 bg-white/8 rounded animate-pulse" />
+        <div className="h-24 w-full mt-3 bg-white/8 rounded animate-pulse" />
+      </GlassWidgetBase>
+    );
+  }
+
+  const dayName = internalDate.toLocaleDateString("en-US", { weekday: "long" });
+  const monthName = internalDate.toLocaleDateString("en-US", { month: "long" });
+  const dayNumber = internalDate.getDate();
 
   return (
     <GlassWidgetBase className={cn("min-w-65", className)} size="lg" glowColor="purple">
