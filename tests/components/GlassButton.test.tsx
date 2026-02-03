@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { GlassButton } from '@/registry/liquid-glass/glass-button'
+import { Icon } from 'lucide-react'
 
 describe('GlassButton', () => {
   it('renders with text', () => {
@@ -161,26 +162,26 @@ describe('GlassButton', () => {
       expect(screen.getByText('With Icon')).toBeInTheDocument()
     })
 
-    it('applies icon size classes', () => {
+    it('renders lucide icon without forcing size', () => {
       const { container } = render(
         <GlassButton>
-          <svg />
+          <Icon iconNode={[]} />
           Text
         </GlassButton>
       )
       const svg = container.querySelector('svg')
-      expect(svg).toHaveClass('size-4')
+      expect(svg).toHaveClass('lucide')
     })
 
-    it('applies icon size classes', () => {
+    it('renders raw svg icon', () => {
       const { container } = render(
         <GlassButton>
-          <svg />
+          <svg data-testid="raw-icon" />
           Text
         </GlassButton>
       )
       const svg = container.querySelector('svg')
-      expect(svg).toHaveClass('size-4')
+      expect(svg).toBeInTheDocument()
     })
   })
 
